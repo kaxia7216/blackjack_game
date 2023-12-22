@@ -125,7 +125,11 @@ class player{
         if( $points == "J" || $points == "Q" || $points == "K"){
             return $this -> totalScore += 10;
         } elseif ( $points == "A" ) {
-            return $this -> totalScore += 1;
+            if( $this -> totalScore <= 10){
+                return $this -> totalScore += 11;
+            } else {
+                return $this -> totalScore += 1;
+            }
         } else {
             return $this -> totalScore += $points;
         }
