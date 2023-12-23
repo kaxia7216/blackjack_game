@@ -1,9 +1,13 @@
 <?php
-include "blackjack_class_player.php";
+
+namespace BlackJack;
+
+require_once(__DIR__.'/blackjack_class_game.php');
+require_once(__DIR__.'/blackjack_class_player.php');
+require_once(__DIR__.'/blackjack_class_card.php');
 
 $cardInfo = new Card();
-$you = new player("あなた", $cardInfo);
-$dealer = new player("ディーラー", $cardInfo);
-$blackjack = new game_blackjack;
-echo $blackjack -> game_start($you, $dealer, $cardInfo);
-?>
+$you = new Player("あなた", $cardInfo);
+$dealer = new Player("ディーラー", $cardInfo);
+$blackjack = new GameBlackjack;
+echo $blackjack -> gameStart($you, $dealer, $cardInfo);
