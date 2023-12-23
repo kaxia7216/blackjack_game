@@ -4,7 +4,6 @@ namespace BlackJack;
 
 class Card
 {
-
     public $cardList = [
         ["ハート", "A"],
         ["ハート", 2],
