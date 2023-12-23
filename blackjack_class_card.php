@@ -1,5 +1,9 @@
 <?php
-class Card{
+
+namespace BlackJack;
+
+class Card
+{
 
     public $cardList = [
         ["ハート", "A"],
@@ -56,9 +60,8 @@ class Card{
         ["クラブ", "K"],
     ];
 
-    public function getCard(){
+    public function getCard()
+    {
         return array_rand($this -> cardList);
     }
 }
-
-?>
